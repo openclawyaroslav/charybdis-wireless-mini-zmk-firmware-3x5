@@ -3,9 +3,8 @@ from pathlib import Path
 
 # === CONFIGURATION ===
 board = "nice_nano"
-# automatically find all *.keymap filenames under ../config/keymap
-keymap_dir = Path(__file__).parent.parent / "config" / "keymap"
-keymaps = sorted(p.stem for p in keymap_dir.glob("*.keymap"))
+# Build only the 3x5-adapted keymap by default.
+keymaps = ["qwerty"]
 
 # Map each format to the shields it should build
 format_shields = {
